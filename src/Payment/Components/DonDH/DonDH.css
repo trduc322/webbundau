@@ -1,0 +1,57 @@
+.section__title {
+    margin: 2rem 0;
+    position: relative;
+    cursor: pointer;
+    display: block;
+    padding-bottom: 0;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.order__listpm {
+    width: 28%;
+}
+
+
+.order__item img {
+    width: 40%;
+}
+
+.order__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+   
+
+}
+
+.item__name {
+    font-weight: 600;
+    font-size: 1.4rem;
+    margin-bottom: .5rem;
+    font-size: 2rem;
+}
+
+.item__price, .item__quantity {
+    font-size: 1.5rem;
+}
+
+.item__price, .item__quantity {
+    color: #a3a3a3;
+}
+
+.order__list{
+    background-color: #fff;
+    padding: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    border-radius: 5px;
+}
+
+.item__detail {
+    margin-left: 1rem;
+}
+
+.DH_items{
+    overflow: auto;
+    max-height: 320px;
+}

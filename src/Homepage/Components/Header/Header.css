@@ -1,0 +1,135 @@
+.header {
+    min-height: 10vh;
+}
+
+.header__top {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    padding: .5rem;
+    display: inline-block;
+    z-index: 2;
+}
+
+.header__contact {
+    display: flex;
+    align-items: center;
+}
+
+.contact--inner>span {
+    display: block;
+    font-size: 1.4rem;
+    font-weight: bold;
+    line-height: 1.4;
+}
+
+.contact--inner>span:last-of-type {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+}
+
+.header__contact>.fa-phone {
+    font-size: 3.5rem;
+    color: var(--primary-color);
+    margin-right: 1.5rem;
+}
+
+.header__user {
+    display: flex;
+    align-items: center;
+}
+
+.header__user .fa-user, .header__user .fa-shopping-basket {
+    font-size: 2rem;
+    color: black;
+}
+
+.user-icon:hover, .cart-icon:hover {
+    background-color: var(--primary-color);
+}
+
+.total {
+    font-weight: bold;
+    font-size: 1.4rem;
+    margin-left: 1.5rem;
+}
+
+.user-icon, .cart-icon {
+    width: 4.5rem;
+    height: 4.5rem;
+    background-color: #f39d1286;
+    margin-left: 1.5rem;
+    display: inherit;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: background-color 0.2s linear;
+    cursor: pointer;
+}
+
+#search>.form-group {
+    position: relative;
+    width: 40rem;
+}
+
+
+
+.form-group>.fa-search {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 2rem;
+    font-size: 1.5rem;
+}
+
+#search .form-group>button {
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    display: block;
+    margin-right: 2rem;
+    font-weight: bold;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+/* Menu */
+
+.menu {
+    background-color: var(--secondary-color);
+}
+
+.menu__list {
+    display: flex;
+    justify-content: center;
+}
+
+.menu__link {
+    transition: opacity 0.2s linear;
+    font-weight: bold;
+}
+
+.menu__link:hover {
+    opacity: 0.7;
+}
+
+/* header content */
+.fa-phone{
+    -webkit-transition: -webkit-transform 0.5s;
+}
+.fa-phone:hover{
+    -webkit-transform: rotate(360deg);
+}

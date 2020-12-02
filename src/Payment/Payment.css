@@ -1,0 +1,33 @@
+:root {
+    --background-color: #f7f6f1;
+    --main-color: #e67e22;
+}
+
+/* //////// Utilities //////// */
+
+.container-subpm {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+
+.section_containerpm {
+    display: flex;
+    margin-bottom: 2rem;
+    justify-content: space-between;
+
+}
+
+
+
+.user_informationpm {
+    width: 70%;
+}
+
+.order_listpm{
+    background-color: #fff;
+    padding: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    border-radius: 5px;
+    width: 28%;
+}

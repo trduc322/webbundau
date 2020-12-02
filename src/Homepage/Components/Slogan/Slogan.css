@@ -1,0 +1,56 @@
+#sologanfunc{
+    margin: 0;
+    padding: 0;
+}
+.item1{
+    width: 1600px;
+    height: 720px;
+    object-fit: cover;
+    background-size: cover;
+    background-position-y: 60%;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.DIuaA {
+    background-color: rgb(226 111 29 / 83%);
+    box-shadow: 0 0 1px 3px rgb(255 183 141);
+    height: 15px;
+    width: 15px;
+}
+.DIuaA:focus{
+    box-shadow:0 0 1px 3px rgba(247, 189, 123, 0.884);
+}
+.DIuaA:hover{
+    box-shadow:0 0 1px 3px rgba(247, 189, 123, 0.884);;
+}
+
+.gUWalH:hover, .gUWalH:focus {
+    box-shadow: 0 0 1px 3px rgba(247, 189, 123, 0.884);
+    
+}
+
+.gUWalH{
+    height: 12px;
+    width: 12px;
+    box-shadow: 0 0 1px 2px rgba(253, 169, 73, 0.884);
+}
+
+.bTybGL:hover{
+    background-color:  rgba(247, 189, 123, 0.884);
+}
+
+.bTybGL,.kyJvRZ{
+    background-color:  rgba(247, 189, 123, 0.884);
+    box-shadow: none;
+    color: #ffe0b7;
+}
+.bTybGL:hover:enabled, .bTybGL:focus:enabled {
+    color: #fff;
+    background-color: rgba(245, 168, 81, 0.884);
+    box-shadow: none;
+}

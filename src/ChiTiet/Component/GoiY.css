@@ -1,0 +1,96 @@
+.section__title_details {
+    text-align: center;
+    font-size: 5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-bottom: 50px;
+}
+
+.shop__body {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+}
+
+.food__list {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.food__item {
+    width: calc(33.33% - 2rem);
+    background-color: #fafaf8;
+    border: 1px solid #eaebeb;
+    margin-bottom: 3rem;
+}
+
+.food__item-header {
+    position: relative;
+}
+
+.food__item-header img {
+    width: 100%;
+    height: 27rem;
+    object-fit: cover;
+}
+
+.coupon, .rate {
+    position: absolute;
+}
+
+.coupon {
+    top: 2rem;
+    left: 2rem;
+    background-color: #e74c3c;
+    color: white;
+    padding: .5rem;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+}
+
+.rate {
+    bottom: 2rem;
+    left: 2rem;
+    font-size: 1.5rem;
+    color: #f6b93b;
+    background-color: rgba(0, 0, 0, 0.315);
+    padding: .5rem;
+}
+
+.food__item-body {
+    padding: 2.5rem 2rem;
+}
+
+.food__item--title {
+    font-weight: bold;
+    font-size: 2.1rem;
+    margin-bottom: 1rem;
+}
+
+.food__item--desc {
+    font-size: 1.7rem;
+    margin-bottom: 2rem;
+}
+
+.food__item--price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.food__item--price>span {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.food__item--price>a {
+    border: 2px dashed var(--secondary-color);
+    color: var(--secondary-color);
+    font-weight: bold;
+    transition: all 0.2s linear;
+}
+
+.food__item--price>a:hover {
+    background-color: var(--secondary-color);
+    color: white;
+}

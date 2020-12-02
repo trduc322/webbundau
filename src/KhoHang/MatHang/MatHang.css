@@ -1,0 +1,56 @@
+.form-group__mathang > label {  
+    font-size: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+}
+
+.mat_hang {
+    border: 2px solid orange;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.delete_mat_hang {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    color: red;
+    font-weight: bold;
+    cursor: pointer;
+    border: 1px solid red;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    border-radius: 50%;
+    padding: 1rem;
+    transition: all 0.2s linear;
+}
+
+.delete_mat_hang:hover {
+    background-color: red;
+    color: #fff;
+}
+
+.form-group__mathang {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#so_luong {
+    width: 50px;
+    height: 40px;
+    font-size: 2rem;
+}
+
+.ma_san_pham_select {
+    font-size: 1.5rem;
+}

@@ -1,0 +1,33 @@
+
+
+
+.title_nhapkho { 
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.plus_btn, .button_submit_kho {
+    width: 120px;
+    height: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+    outline: none;
+    border: none;
+    background-color: orange;
+    font-size: 2rem;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: all 0.2s linear;
+}
+
+.plus_btn:hover, .button_submit_kho:hover {
+    background-color: rgb(255, 136, 0);
+}
+
+.nhapKho_chucnang {
+    display: flex;
+    justify-content:center;
+    margin-top: 2rem;
+}

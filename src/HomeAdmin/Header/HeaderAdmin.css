@@ -1,0 +1,119 @@
+.header {
+    min-height: 10vh;
+    line-height: 1.4;
+}
+
+.header__top {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    padding: .5rem;
+    display: inline-block;
+    z-index: 2;
+}
+
+
+.header__user {
+    display: flex;
+    align-items: center;
+}
+
+.header__user .fa-user, .header__user .fa-shopping-basket {
+    font-size: 2rem;
+    color: black;
+}
+
+.user-icon:hover {
+    background-color: var(--primary-color);
+    color: rgb(248, 211, 177);
+}
+
+.total {
+    font-weight: bold;
+    font-size: 1.4rem;
+    margin-left: 1.5rem;
+}
+
+.user-icon {
+    background-color: #f39d1286;
+    margin-left: 1.5rem;
+    display: inherit;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: background-color 0.2s linear;
+    transition: color 0.1s ease;
+    cursor: pointer;
+}
+
+
+/* Menu */
+
+.menu {
+    background-color: var(--secondary-color);
+}
+
+.menu__list {
+    display: flex;
+    justify-content: center;
+}
+
+.menu__link {
+    transition: opacity 0.2s linear;
+    font-weight: bold;
+}
+
+.menu__link:hover {
+    opacity: 0.7;
+}
+
+#header_admin_text{
+    font-weight: bold;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    padding: .5rem;
+    width: 33.33%;
+    text-align: left;
+    align-items: left;
+    z-index: 2;
+}
+.Admin_name{
+    font-weight: bold;
+    font-size: 2rem;
+    color: var(--primary-color);
+    padding: .5rem;
+    transition: color 0.1s ease;
+}
+.admin-icon:hover{
+    color: rgb(248, 211, 177);
+    background-color: orange;
+    color: black;
+}
+
+.admin-icon:hover .Admin_name,
+.admin-icon:hover .admin {
+    color: black;
+}
+
+
+
+.admin-icon {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.header__user .admin {
+    color: orange;
+}

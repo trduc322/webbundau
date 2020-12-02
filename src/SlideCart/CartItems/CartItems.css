@@ -1,0 +1,87 @@
+.shelf-item {
+    position: relative;
+    box-sizing: border-box;
+    padding: 5%;
+
+    transition: background-color 0.2s, opacity 0.2s;
+}
+
+.shelf-item__del {
+    width: 16px;
+    height: 16px;
+    top: 15px;
+    right: 5%;
+    border-radius: 50%;
+    position: absolute;
+    background-size: auto 100%;
+    
+    background-repeat: no-repeat;
+    z-index: 2;
+    cursor: pointer;
+}
+.shelf-item__del:hover {
+      background-position-x: -17px;
+    }
+
+.shelf-item::before {
+    content: '';
+    width: 90%;
+    height: 2px;
+    background-color: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 0;
+    left: 5%;
+  }
+
+  .shelf-item__thumb,
+  .shelf-item__details,
+  .shelf-item__price {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+
+  .shelf-item__thumb{
+    vertical-align: middle;
+    width: 15%;
+    margin-right: 3%;
+  }
+
+  .shelf-item__thumb > img{
+    
+        width: 100%;
+        height: auto;
+      
+  }
+
+  .shelf-item__details{
+    width: 48%;
+  }
+
+  .change-product-button {
+    color: #b7b7b7;
+    border: 0;
+    background-color: rgb(248, 100, 15);
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    margin-right: 1px;
+  }
+  .qtt{
+    font-weight: normal;
+  }
+
+  .desc{
+    font-weight: normal;
+  }
+
+  .del_button{
+    font-size: 3rem;
+    position: absolute;
+    top: 50px;
+    margin-left: 17px;
+  }
+
+
+  

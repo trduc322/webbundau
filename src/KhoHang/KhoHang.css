@@ -1,0 +1,22 @@
+.title_khohang{
+    padding-top: 50px;
+    padding-bottom: 20px;
+    color: #eb7a2f;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.tb_khohang{
+    margin: 0 auto;
+    width: 1200px;
+
+}
+
+.flex {
+    max-width: 1000px;
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    margin: 0 auto;
+}

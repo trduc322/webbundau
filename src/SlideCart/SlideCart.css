@@ -1,0 +1,142 @@
+.slidecart {
+    position: fixed;
+    top: 0;
+    right: -450px;
+    width: 450px;
+    height: 100%;
+    background-color: rgb(248, 191, 117);;
+    box-sizing: border-box;
+    transition: right 0.2s;
+    z-index: 9999;
+  }
+  .slidecart-open {
+      right: 0;
+    }
+  .slidecart-close-btn {
+      width: 50px;
+      height: 60px;
+      color: #ececec;
+      background-color: rgb(248, 191, 117);;
+      text-align: center;
+      line-height: 50px;
+      position: absolute;
+      top: 0;
+      left: -50px;
+      cursor: pointer;
+      border-radius: 20px 0px 0px 20px;
+      padding: 15px;
+
+  }
+  .slidecart:hover {
+      }
+  
+      .slidecart-closed {
+        position: absolute;
+        background-color: rgb(255, 219, 173);
+        background-size: 50%;
+        left: -60px;
+        width: 60px;
+        height: 60px;
+        cursor: pointer;
+        padding: 10px;
+        border-radius: 20px 0px 0px 20px;
+
+      }
+  
+  .slidecart-header {
+        color: #ececec;
+        box-sizing: border-box;
+        text-align: center;
+        padding: 45px 0;
+        font-size: 2rem;
+  }
+  .slidecart-header-title {
+    font-weight: bold;
+    font-size: 1.2em;
+    vertical-align: middle;
+  }
+  .slidecart-containter {
+    position: relative;
+    min-height: 280px;
+    padding-bottom: 200px;
+    overflow: auto;
+    max-height: 620px;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+    -webkit-appearance: none;
+    width: 10px;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: #0c0b10;
+  }
+  
+  
+  
+  .empty-slidecart {
+    color: #ececec;
+    text-align: center;
+    line-height: 40px;
+    font-size: 1.6rem;
+  }
+
+  .float-cart__footer{
+    box-sizing: border-box;
+    padding: 5%;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 200px;
+    z-index: 2;
+    background-color: #d15921;
+  }
+
+  .sub,.sub-price {
+      color: #d1d1d6;
+      vertical-align: middle;
+      display: inline-block;
+      font-size: 1.4rem;
+    }
+
+  .sub {
+      width: 20%;
+    }
+
+  .sub-price__val, .sub-price__installment{
+      margin: 0;
+    }
+  .sub-price__val{
+      margin-left: 1.5rem;
+      color: #ffd000;
+      font-size: 22px;
+  }
+
+  .buy-btn {
+    color: #f3621f;
+    text-transform: uppercase;
+    background-color: #f1ae77;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
+    cursor: pointer;
+    font-size: 1.6rem;
+    font-weight: bold;
+    transition: background-color 0.2s;
+
+    
+    }
+
+    .buy-btn:hover{
+      background-color: #e4a673;
+    }
+
+  
+  .float-cart__content {
+    height: 100%;
+  }
+

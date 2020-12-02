@@ -1,0 +1,28 @@
+{
+    "items":[
+        {
+            "sys": {"id" : "1"},
+            "fileds":{
+                "name": "Bún Đậu",
+                "price": 100.000,
+                "image": {"fileds":{"file":{"url": "./images/bundau.jpg"}}}
+            }
+        },
+        {
+            "sys": {"id" : "2"},
+            "fileds":{
+                "name": "Ốc Hút",
+                "price": 100.000,
+                "image": {"fileds":{"file":{"url": "./images/ochut.jpg"}}}
+            }
+        },
+        {
+            "sys": {"id" : "3"},
+            "fileds":{
+                "name": "Mat Cha",
+                "price": 100.000,
+                "image": {"fileds":{"file":{"url": "./images/matcha.jpg"}}}
+            }
+        }
+    ]
+}

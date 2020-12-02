@@ -1,0 +1,142 @@
+.Sign_up 
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
+
+
+.form_sign_up div input {
+    width: 100%;
+    border-radius: 5rem;
+    border: 1px solid #f39d1286;
+    padding: 1.5rem 4rem 1.5rem 5rem;
+    font-family: inherit;
+    font-size: 1.4rem;
+    outline: none;
+    
+}
+
+
+.form_sign_up{
+    padding: 50px;
+    width: 450px;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 240, 232);
+    border-radius: 30px;
+}   
+.sign_up_input_username, .sign_up_input_pass{
+    display: block;
+    margin-bottom: 15px;
+}
+.sign_up_input_username label, .sign_up_input_pass label{
+    font-weight: bold;
+    font-family: inherit;
+    font-size: 15px;
+}
+
+.sign_up_form > span {
+    font-size: 15px;
+    font-family: inherit;
+}
+
+.sign_up_with{
+    margin-bottom: 1rem;
+}
+
+.sign_up_input_pass 
+{
+    display: block;
+    margin-bottom: 15px;
+}
+
+.facebooksi, .googlesi  
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 27px;
+    text-align: center;
+    border-radius: 30px;
+    width: 100%;
+    height: 40px;
+    font-weight: bold;
+    font-family: inherit;
+    font-size: 12px;
+    position: relative;
+    margin-bottom:5px ;
+}
+
+.facebooksi {
+    background-color: #3B5998;
+}
+.facebooksi:hover{
+    background-color:#2d4475;
+    transition: background-color 0.2s linear;
+}
+
+.googlesi
+{
+    background-color: #dd4b39;
+}
+.googlesi:hover{
+    background-color: rgba(172, 18, 18, 0.726);
+    transition: background-color 0.2s linear;
+}
+
+
+.submit_button_si
+{
+    display: block;
+    margin: 25px auto;
+    background-color: #e67e22;
+    color: white;
+    margin-bottom: 2rem;
+    top: 0px;
+    right: 10px;
+    border: none;
+    outline: none;
+    height: 50px;
+    width: 215px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-family: inherit;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+
+.submit_button_si:hover{
+    background-color: #ffaa89;
+    
+}
+
+.sign_up_fb 
+{
+    display: relative;  
+    
+}
+.sign_up_gg 
+{
+    display: relative;  
+    margin-bottom: 20px;
+}
+
+.fb_icon_si, .gg_icon_si
+{
+    top: 50%;
+    left: 20px;
+    background-repeat: no-repeat;
+    transform: translateY(-50%);
+    font-size: 27px;
+    position: absolute;
+    
+}
+.fb_icon_si{
+    fill:#fff;
+}
+

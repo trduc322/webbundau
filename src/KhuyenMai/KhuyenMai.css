@@ -1,0 +1,173 @@
+.km-section {
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+}
+.km-container {
+    max-width: var(--container);
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 2rem;
+}
+
+.km-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.km-item__img {
+    position: relative;
+}
+
+.km-item__img img {
+    border-radius: 1rem;
+}
+
+.km-title{
+    font-size: 40px;
+    color:#F39C12;
+    font-weight: bold;
+}
+
+.km-item__detail, .km-item__img {
+    width: calc(50% - 2rem);
+}
+
+.km-shop__coupon {
+    left: 3rem;
+}
+.km-shop__coupon, .km-shop__discount {
+    position: absolute;
+    top: 3rem;
+    background-color: #e74c3c;
+    color: white;
+    padding: .5rem;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+}
+
+.km-shop__discount {
+    left: 12rem;
+}
+.km-shop__coupon, .km-shop__discount {
+    position: absolute;
+    top: 3rem;
+    background-color: #e74c3c;
+    color: white;
+    padding: .5rem;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+}
+
+.km-item__detail {
+    margin-left: 1rem;
+    padding: 2rem;
+}
+
+.km-item__detail--title {
+    font-size: 5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-transform: capitalize;
+}
+
+.km-item__detail--desc {
+    font-size: 2rem;
+    color: #949494;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.km-price, .km-shipping__price {
+    font-weight: 600;
+}
+
+.km-price, .km-shipping__price {
+    font-weight: 600;
+    font-size: 2rem;
+}
+.km-price {
+    font-weight: bold;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-right: 1rem;
+}
+
+.km-price--old {
+    font-size: 2rem;
+    text-decoration: line-through;
+}
+
+.km-item__body {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5rem;
+}
+
+.km-quantity {
+    font-size: 2rem;
+    margin-right: 4rem;
+    font-size: 2.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.km-fa-plus {
+    margin-right: 1rem;
+}
+
+.cong, .tru {
+    padding: .5rem;
+    background-color: #cecece;
+    border-radius: 50%;
+}
+
+.km-fa-minus {
+    margin-left: 1rem;
+}
+.cong, .tru {
+    padding: .5rem;
+    background-color: #cecece;
+    border-radius: 50%;
+}
+
+.km-btn--atc {
+    background-color: var(--primary-color);
+    font-weight: bold;
+    transition: all 0.2s linear;
+}
+.km-btn--rounded {
+    border-radius: 5rem;
+}
+.km-btn {
+    display: inline-block;
+    vertical-align: middle;
+    border: 0;
+    outline: none;
+    padding: 1.5rem 3rem;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    font-family: var(--primary-font);
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+.km-feature__list_ct {
+    display: flex;
+    flex-direction: column;
+}
+
+.km-feature__item_ct {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.km-fa-seedling {
+    color: #2ecc71;
+}
+.km-fa-clock, .km-fa-carrot, .km-fa-seedling {
+    margin-right: 1rem;
+}

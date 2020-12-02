@@ -1,0 +1,53 @@
+{
+    "do_an": [
+        {
+            "id": 1,
+            "name": "bun dau",
+            "price": "10000"
+        },
+
+        {
+            "id": 2,
+            "name": "oc hut",
+            "location": "10000"
+        },
+
+        {
+            "id": 3,
+            "name": "oc hut",
+            "location": "10000"
+        },
+
+        {
+            "id": 4,
+            "name": "oc hut",
+            "location": "10000"
+        }
+    ],
+
+    "thuc_uong": [
+        {
+            "id": 1,
+            "name": "bun dau",
+            "price": "10000"
+        },
+
+        {
+            "id": 2,
+            "name": "oc hut",
+            "location": "10000"
+        },
+
+        {
+            "id": 3,
+            "name": "oc hut",
+            "location": "10000"
+        },
+
+        {
+            "id": 4,
+            "name": "oc hut",
+            "location": "10000"
+        }
+    ]
+}

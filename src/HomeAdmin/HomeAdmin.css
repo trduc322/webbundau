@@ -1,0 +1,54 @@
+
+.container {
+    
+}
+
+.tb_donhang{
+    padding: 50px;
+    width: 800px;
+
+}
+.form_donhang_admin{
+    display: flex;
+    justify-content: space-between;
+}
+
+.Donhang_title{
+    padding-top: 50px;
+    padding-bottom: 20px;
+    color: #eb7a2f;
+    font-weight: bold;
+    font-size: 20px;
+}
+.tb_chitietdonhang{
+    margin: 0 auto;
+    width: 1200px;
+
+}
+.Ten_dh{
+    color: #eb7a2f;
+    font-weight: bold;
+    font-size: 15px;
+}
+.TongTien{
+    color: #eb7a2f;
+    font-weight: bold;
+    font-size: 22px;
+    text-align: right;
+    padding-top: 20px;
+    margin-right: 100px;
+}
+.tb_chitietdonhang tr td{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.tb_tongdth tr td{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.tb_tongdth{
+    margin: 0 auto;
+    width: 1200px;
+    margin-bottom: 100px;
+}

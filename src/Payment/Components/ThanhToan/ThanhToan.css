@@ -1,0 +1,52 @@
+
+
+
+.payment__box {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+
+.credit, .paypal {
+    margin-bottom: 1rem;
+}
+
+.visa {
+    margin-right: 1rem;
+}
+
+.payment__box img {
+    width: 50px;
+}
+
+.payment__box div > label {
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+.payment__box > div {
+    display: flex;
+    align-items: center;
+}
+
+input[type="radio"] {
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 1rem;
+}
+
+.section__payment {
+    background-color: #fff;
+    padding: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    border-radius: 5px;
+    margin-top: 3rem;
+}
+
+.fa-money-bill {
+    font-size: 2rem;
+    color: #27ae60;
+}

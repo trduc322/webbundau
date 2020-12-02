@@ -1,0 +1,86 @@
+.tb_sanpham{
+    margin: 0 auto;
+    width: 1200px;
+    margin-bottom: 50px;
+}
+.title_sp{
+    padding-top: 50px;
+    padding-bottom: 20px;
+    color: #eb7a2f;
+    font-weight: bold;
+    font-size: 20px;
+}
+.fa_edit{
+    font-size: 30px;
+}
+.edit{
+    width: 75%;
+    height: auto;
+    background: #cecece;
+    margin: 0 auto;
+    margin-bottom: 100px;
+    padding: 50px;
+    position: relative;
+}
+
+.edit label{
+    color: #201d1a;
+    font-weight: bold;
+    font-size: 20px;
+    padding-right: 30px;
+}
+.edit input{
+    height: 35px;
+    width: 60%;
+    
+}
+
+.edit_input_form{
+    display: flex;
+    padding-bottom: 30px;
+}
+
+.edit_input_form > label {
+    width: 200px;
+}
+
+#info--des{
+    width: 60%;
+    height: 150px;
+    font-size: 2rem;
+}
+.add_edit_btn{
+    font-size: 1.5rem;
+    width: 100px;
+    position: absolute;
+    right: 50px;
+    bottom: 79px;
+}
+
+.imgPr{
+    width:300px;
+    height: 300px;
+}
+.imgPrSmall{
+    width:150px;
+    max-height: 150px;
+}
+
+.preview{
+    display: flex;
+    align-items: flex-end;
+}
+
+.form-control{
+
+    right: 50px;
+    top: 50px;
+}
+
+#file-input{
+    width: 200px;
+}
+
+input[type='file'] {
+   width: auto;
+}

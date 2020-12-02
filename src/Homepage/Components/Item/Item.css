@@ -1,0 +1,78 @@
+.food__item {
+    width: calc(33.33% - 2rem);
+    background-color: #fafaf8;
+    border: 1px solid #eaebeb;
+    margin-bottom: 3rem;
+    margin-right: 2rem;
+    border-radius: 10px;
+}
+
+.food__item-header {
+    position: relative;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.food__item-header img {
+    width: 100%;
+    height: 27rem;
+    object-fit: cover;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.coupon, .rate {
+    position: absolute;
+}
+
+.coupon {
+    top: 2rem;
+    left: 2rem;
+    background-color: #e74c3c;
+    color: white;
+    padding: .5rem;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+}
+
+
+
+.food__item-body {
+    padding: 2.5rem 2rem;
+}
+
+.food__item--title {
+    font-weight: bold;
+    font-size: 2.1rem;
+    margin-bottom: 1rem;
+}
+
+.food__item--desc {
+    font-size: 1.7rem;
+    margin-bottom: 2rem;
+}
+
+.food__item--price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.food__item--price>span {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.food__item--price>a {
+    border: 2px dashed var(--secondary-color);
+    color: var(--secondary-color);
+    font-weight: bold;
+    transition: all 0.2s linear;
+}
+
+.food__item--price>a:hover {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.food__itemd-body {
+    padding: 2.5rem 2rem;
+}
