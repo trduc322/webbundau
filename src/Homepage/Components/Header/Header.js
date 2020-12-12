@@ -1,12 +1,13 @@
 import React from "react"
-
 import './Header.css';
 import { FaSearch } from 'react-icons/fa';
 import { FaPhone } from 'react-icons/fa';
 import { FaUser } from 'react-icons/fa';
 import { FaShoppingBasket} from 'react-icons/fa';
 class Header extends React.Component{
+
     render(){
+      
         return(
             <div className = "header">
               <div class = "container">
@@ -21,6 +22,14 @@ class Header extends React.Component{
     
 }
 function HeaderTop(){
+  var user = JSON.parse(localStorage.getItem('USER'));
+  var link;
+  
+  if(user !== null){
+    link = "/info";
+  }if(user==null){
+    link = "/login";
+  }
     return(      
         <div className="header__top">
             <a href="./" className="header__logo">
@@ -43,37 +52,67 @@ function HeaderTop(){
             </div>
             <div className="header__user">
               <div className="user-icon">
-                <FaUser className="far fa-user"></FaUser>
+                <a href = {link} ><FaUser className="far fa-user"></FaUser></a>
               </div>
-              <div className="cart-icon">
+              {/* <div className="cart-icon">
                 <FaShoppingBasket className="fas fa-shopping-basket"/>
-              </div>
-              <span className="total">Total: 0 VND</span>
+              </div> */}
+              {/* <span className="total">Total: 0 VND</span> */}
             </div>
           </div>
 
     )
 }
 function HeaderBot(){
+  var user = JSON.parse(localStorage.getItem('USER'));
+  var link;
+  
+  if(user !== null){
     return(
-        <div class="menu">
-          <div className="container">
-            <nav className="header__menu">
-              <ul className="menu__list">
-                <li className="menu__item">
-                  <a href="#" className="menu__link btn">Thực đơn</a>
-                </li>
-                <li className="menu__item">
-                  <a href="#" className="menu__link btn">Giảm giá</a>
-                </li>
-                <li className="menu__item">
-                  <a href="#" className="menu__link btn">Tuyển dụng</a>
-                </li>
-              </ul>
-            </nav>
-          </div>
+      <div class="menu">
+        <div className="container">
+          <nav className="header__menu">
+            <ul className="menu__list">
+              <li className="menu__item">
+                <a href="/menu" className="menu__link btn">Thực đơn</a>
+              </li>
+              <li className="menu__item">
+                <a href="#" className="menu__link btn">Giảm giá</a>
+              </li>
+              <li className="menu__item">
+                <a href="#" className="menu__link btn">Tuyển dụng</a>
+              </li>   
+              <li className="menu__item">
+                <a href="./" onClick={()=>{localStorage.clear()}} className="menu__link btn">Đăng xuất</a>
+              </li>       
+            </ul>
+          </nav>
         </div>
+      </div>
+  )
+  }
+  else{
+    return(
+      <div class="menu">
+        <div className="container">
+          <nav className="header__menu">
+            <ul className="menu__list">
+              <li className="menu__item">
+                <a href="/menu" className="menu__link btn">Thực đơn</a>
+              </li>
+              <li className="menu__item">
+                <a href="#" className="menu__link btn">Giảm giá</a>
+              </li>
+              <li className="menu__item">
+                <a href="#"  className="menu__link btn">Tuyển dụng</a>
+              </li>          
+            </ul>
+          </nav>
+        </div>
+      </div>
     )
+  }
+    
 }
 
 // function Slogan(){

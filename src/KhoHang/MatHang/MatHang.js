@@ -11,7 +11,6 @@ class MatHang extends Component{
     render(){
         return(
         <div className = "mat_hang">
-            <span class="delete_mat_hang">X</span>
             <form className = "form_mat_hang">
                 <div className="form-group__mathang">
                     <label for="ma_mat_hang">Mã sản phẩm</label>

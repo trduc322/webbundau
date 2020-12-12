@@ -27,10 +27,10 @@ function Sloganfunc(){
           <img className="item1" src = "./Images/background.jpg"/>
         </div>
         <div>
-          <img className="item1" src ="./Images/food-1.jpeg"/>
+          <img className="item1" src ="./Images/background6.jpg"/>
         </div>
         <div>
-          <img className ="item1" src ="./Images/food-2.jpg"/>
+          <img className ="item1" src ="./Images/background7.jpg"/>
         </div>
         <div>
           <img className ="item1" src ="./Images/nemchuaran.jpg"/>

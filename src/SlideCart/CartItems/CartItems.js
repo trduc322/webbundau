@@ -8,14 +8,14 @@ class CartItems extends React.Component{
             <div class="shelf-item">
                 <div class="shelf-item__del"></div>
                 <div class="shelf-item__thumb">
-                    <img src={item.product.image}/>
+                    <img src={item.product.link_Anh}/>
                 </div>
                 <div class="shelf-item__details">
                     <p class="title">{item.product.name}</p>
-                    <p class="desc">{item.product.description}</p><p class="qtt">Số lượng: {item.quantity}</p>
+                    <p class="desc">{item.product.moTa}</p><p class="qtt">Số lượng: {item.quantity}</p>
                 </div>
                 <div class="shelf-item__price">
-                    <p>{this.showSubTotal(item.product.price, item.quantity)}.000 VNĐ</p>
+                    <p>{this.showSubTotal(item.product.giaGoc, item.quantity)}.000 VNĐ</p>
                 <div>
                     <button disabled="" class="change-product-button" onClick={ () => this.onDecToCart(item.product,item.quantity) }>-</button>
                     <button class="change-product-button" onClick={ () => this.onIncToCart(item.product,item.quantity) }>+</button>

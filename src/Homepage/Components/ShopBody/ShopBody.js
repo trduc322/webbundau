@@ -1,6 +1,6 @@
 import React from "react"
 import './ShopBody.css';
-import SanPham from "../../../Class/SanPham.js"
+
 //import { map } from "jquery";
 
 
@@ -14,7 +14,7 @@ import SanPham from "../../../Class/SanPham.js"
 
 class ShopBody extends React.Component{
   
-// constructor(props){
+// constructor(props){D
 //   super(props);
 //   var sp1 = new SanPham(1, "abc", "20.000", "/Images/bundau.jpg")
 //   var sp2 = new SanPham(2, "abc", "20.000", "/Images/ochut.jpg")

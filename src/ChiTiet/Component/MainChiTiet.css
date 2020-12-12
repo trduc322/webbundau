@@ -218,7 +218,7 @@ section {
     padding-bottom: 7rem;
 }
 
-.food__list {
+/* .food__list {
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
@@ -300,4 +300,4 @@ section {
 .food__item--price>a:hover {
     background-color: var(--secondary-color);
     color: white;
-}
+} */

@@ -2,8 +2,19 @@ import React from "react"
 import './ThongTinKhachHang.css';
 
 class ThongTinKhachHang extends React.Component{
+   constructor(props) {
+     super(props)
+     this.state = {
+        
+     }
+   }
+    
+    
+  
     render()  {
-        return(
+      var user = JSON.parse(localStorage.getItem('USER'));
+      if(user===null)
+        {return(
           <form id="user__form">
             <h2 class="section__title">THÔNG TIN KHÁCH HÀNG</h2>
             <div>
@@ -33,6 +44,39 @@ class ThongTinKhachHang extends React.Component{
           </form>   
         )
     }
+    if(user !== null){
+      return(
+        <form id="user__form">
+          <h2 class="section__title">THÔNG TIN KHÁCH HÀNG</h2>
+          <div>
+            <div class="section__name">
+              <label for="name">Họ tên</label>
+              <input type="text" id="name" name="name" value = {user.name} required />
+            </div>
+            <div class="section__phone">
+              <label for="phone">Số điện thoại</label>
+              <input type="number" id="phone" name="phone" value={user.sdt} required />
+            </div>
+            <div class="section__email">
+              <label for="email">Email</label>
+              <input type="email" id="emailttkh" name="email" value = {user.email} />
+            </div>
+          </div>
+          <div>
+            <div class="section__address">
+              <label for="address">Địa chỉ</label>
+              <input type="text" id="address" name="address" value={user.diaChi} required />
+            </div>
+            <div class="section__note">
+              <label for="note">Ghi chú</label>
+              <textarea name="note" id="note"></textarea>
+            </div>
+          </div>
+        </form>   
+      )
+    }
+  }
+    
 }
 
 export default ThongTinKhachHang;

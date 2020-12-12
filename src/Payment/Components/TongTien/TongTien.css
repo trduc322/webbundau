@@ -27,6 +27,7 @@
 
 .summary__title {
     margin: .5rem 0;
+    font-size: 1.6rem;
     color: #979797;
 }
 
@@ -41,6 +42,7 @@
 
 #form__coupon {
     margin: 1rem 0;
+    font-size: 1.6rem;
 }
 
 #coupon {

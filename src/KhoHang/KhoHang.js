@@ -2,16 +2,39 @@ import React from "react"
 import Header from "../HomeAdmin/Header/HeaderAdmin.js"
 import Footer from "../HomeAdmin/Footer/Footer.js"
 import "./KhoHang.css"
+import axios from 'axios'
+import callApi from "../apiCaller.js"
 import NhapKho from "./NhapKho/NhapKho.js"
 import XuatKho from "./XuatKho/XuatKho.js"
 
 class KhoHang extends React.Component{
+
+    
+    constructor(props) {
+        super(props)
+        this.state = {
+            kho : [],
+            id : "",
+            name : "",
+            quantity : "",
+            file: null
+        }
+
+    }
+
+    componentDidMount() {
+        callApi("khohang", "GET", null).then((res) => {
+            this.setState({
+                kho: res.data,
+            }); 
+        });
+    }
     render(){
         return(
             <div>
                 <Header/>
                 <div class="container">
-                    <ListHang/>
+                    <ListHang show={this.showkhohang(this.state.kho)}/>
                     <div class="flex">
                         <NhapKho/>
                         <XuatKho/>
@@ -21,9 +44,26 @@ class KhoHang extends React.Component{
             </div>
         )
     }
+
+    
+
+    showkhohang(kho){
+        var result = null;
+        if (kho.length > 0) {
+            result = kho.map((product, index) => {
+            return (
+                <Sanphamkho key={index} product={product}/>
+            );
+            });
+        }
+        return result;
+    }
 }
 
-function ListHang(){
+
+
+
+function ListHang(props){
     return(
         <div>
             <h1 className ="title_khohang">Kho hàng</h1>
@@ -33,28 +73,19 @@ function ListHang(){
                             <th class="th_admin1">Tên</th>
                             <th class="th_admin1">Số lượng</th>
                         </tr>
-                        <tr>
-                            <td>SP01</td>
-                            <td>Sản phẩm 1</td>
-                            <td>99</td>
-                        </tr>
-                        <tr>
-                            <td>SP01</td>
-                            <td>Sản phẩm 1</td>
-                            <td>99</td>
-                        </tr>
-                        <tr>
-                            <td>SP01</td>
-                            <td>Sản phẩm 1</td>
-                            <td>99</td>
-                        </tr>
-                        <tr>
-                            <td>SP01</td>
-                            <td>Sản phẩm 1</td>
-                            <td>99</td>
-                        </tr>
+                        {props.show}
                     </table>
         </div>
+    )
+}
+
+function Sanphamkho(props){
+    return(
+        <tr>
+            <td>{props.product.iD_ThucPham}</td>
+            <td>{props.product.tenThucPham}</td>
+            <td>{props.product.soLuong}</td>
+        </tr>
     )
 }
 

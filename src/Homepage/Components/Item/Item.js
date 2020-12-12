@@ -1,5 +1,5 @@
 import React from "react";
-import './Item.css';
+import "./Item.css"
 
 
 
@@ -35,14 +35,14 @@ class Item extends React.Component{
             <li class="food__item">
                 <div class="food__item-header">
                   <span class="coupon">FREESHIP</span>
-                  <img src={product.image} alt={product.name}/>
+                  <img src={product.link_Anh} alt={product.name}/>
                   
                 </div>
                 <div class="food__itemd-body">
                   <h3 class="food__item--title">{product.name}</h3>
-                  <p class="food__item--desc">{product.description}</p>
+                  <p class="food__item--desc">{product.moTa}</p>
                   <div class="food__item--price">
-                    <span class="price">{product.price}.000 VND</span>
+                    <span class="price">{product.giaGoc}.000 VND</span>
                     <a  class="btn" onClick={ () => this.onAddToCart(product) }>Đặt ngay</a>
                   </div>
                 </div>

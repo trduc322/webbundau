@@ -53,7 +53,7 @@ function App() {
         <Feature hinh/>
           <div class = "container">
             <FoodType/>
-            <ProductsContainer/>
+            <ProductsContainer category="all"/>
             <CartContainer/>
           </div>
           

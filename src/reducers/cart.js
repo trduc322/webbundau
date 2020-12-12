@@ -52,7 +52,7 @@ var findProductInCart = (cart, product)  => {
     var index = -1;
     if(cart.length > 0){
         for(var i =0; i < cart.length ; i++){
-            if(cart[i].product.id  === product.id){
+            if(cart[i].product.iD_ThucPham  === product.iD_ThucPham){
                 index = i;
                 break;
             }

@@ -4,15 +4,60 @@ import Footer from "../Homepage/Components/Footer/Footer.js"
 import './DangKi.css';
 import { FaFacebookF} from 'react-icons/fa';
 import { FaGoogle} from 'react-icons/fa';
+import {useState} from 'react';
+import axios from "axios"
+import Callapi from '../apiCaller.js'
 
 
 class DangKi extends React.Component{
-    render()  {
+
+    constructor(props){
+        super(props);
+
+        this.state = {
+            userName: '',
+            password: '',
+            password_comfirmation: '',
+            email: ''
+            }
+
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+    }
+
+    
+
+    
+    handleSubmit(e){
+        var data = {
+            username : this.state.userName,
+            password : this.state.password,
+            email: this.state.email
+        }
+        Callapi("user","POST", data) 
+        alert("Đăng kí thành công");
+        window.location="http://localhost:3000/login";
+        e.preventDefault();
+        
+    }
+
+
+    handleChange(e){
+        this.setState({
+            [e.target.name]: e.target.value
+        })
+        e.preventDefault();
+    }
+    
+
+
+    render(){
+
         return(
             <div>
             <Header/>
                 <div className="Sign_up">
-                    <form className="form_sign_up">
+                    <form className="form_sign_up" onSubmit ={this.handleSubmit} >
                         <div className="Sign_up_with">
                         <div className="sign_up_fb">
                                
@@ -31,21 +76,21 @@ class DangKi extends React.Component{
                         </div>
                         <div className = "sign_up_input_username">
                             <label for ="userName">Tên đăng nhập</label>
-                            <input type="text" placeholder="Nhập tên đăng nhập..." name="uname" required/>
+                            <input type="text" placeholder="Nhập tên đăng nhập..." name="userName" value ={this.state.userName} onChange = {this.handleChange} required/>
                         </div>
                         <div className="sign_up_input_pass">
                             <label for="psw"><b>Mật khẩu</b></label>
-                            <input type="password" placeholder="Mật khẩu..." name="psw" required/>
+                            <input type="password" placeholder="Mật khẩu..." name="password" value ={this.state.password} onChange = {this.handleChange} required/>
                         </div>
                         <div className="sign_up_input_pass">
                             <label for="psw"><b>Xác nhân lại mật khẩu</b></label>
-                            <input type="password" placeholder="Nhập lại mật khẩu..." name="psw" required/>
+                            <input type="password" placeholder="Nhập lại mật khẩu..." name="password_comfirmation" value ={this.state.password_comfirmation} onChange = {this.handleChange} required/>
                         </div>
                         <div className = "sign_up_input_username">
-                            <label for ="userName">Tên đăng nhập</label>
-                            <input type="text" placeholder="Vd: abc@gmail.com..." name="email" required/>
+                            <label for ="userName">Email</label>
+                            <input type="text" placeholder="Vd: abc@gmail.com..." name="email" value = {this.state.email} onChange = {this.handleChange} required/>
                         </div>
-                        <button className = "submit_button_si" type="submit" href="Homepage">ĐĂNG KÍ</button>
+                        <button className = "submit_button_si" type="submit" href="/login">ĐĂNG KÍ</button>
                     </form>
                     
                 </div>
@@ -56,3 +101,5 @@ class DangKi extends React.Component{
 }
 
 export default DangKi;
+
+

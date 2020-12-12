@@ -30,3 +30,4 @@ export const actDecToCart = (product,quantity) => {
         quantity
     }
 }
+
