@@ -12,6 +12,7 @@ class KhachHangAdmin extends React.Component{
         super(props)
         this.state = {
             users : [],
+            role: false
         }
     }
     componentDidMount() {
@@ -20,31 +21,57 @@ class KhachHangAdmin extends React.Component{
                 users: res.data,
             }); 
         })
+
+        var id = JSON.parse(localStorage.getItem('USER'));
+        if(id !==null){
+            callApi(`user/${id}`,"GET",null).then((res)=>{
+                this.setState({
+                    role: res.data.role
+                })
+            });
+            }
+            if(id===null){
+              this.setState({
+                role: false
+              })
+            }
     }
 
     showKH(users){
         var result = null;
         if (users.length > 0) {
+            
             result = users.map((user, index) => {
+                if(user.role===false){
             return (
                 <KhachHang key={index} user={user}/>
             );
+                }
             });
+            
         }
         return result;
     }
     
 
     render(){
-        return(
-            <div>
-                <Header/>
-                <div class="container">
-                    <ListKhachHang show={this.showKH}/>
+        if(this.state.role===true)
+        {
+            return(
+                <div>
+                    <Header/>
+                    <div class="container">
+                        <ListKhachHang show={this.showKH(this.state.users)}/>
+                    </div>
+                    <Footer/>
                 </div>
-                <Footer/>
-            </div>
+            )
+        }
+        
+        return(
+            <p>ERROR 404: NOT FOUND</p>
         )
+        
     }
 }
 
@@ -58,8 +85,8 @@ function ListKhachHang(props){
                             <th class="th_admin1">Tên khách hàng</th>
                             <th class="th_admin1">Số điện thoại</th>
                             <th></th>
-                            {props.show}
                         </tr>
+                            {props.show}
                         
                     </table>
         </div>

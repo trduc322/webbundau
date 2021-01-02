@@ -25,15 +25,22 @@ class DangNhap extends React.Component{
             password: this.state.password
         }
         Callapi("user/check", "POST", userdata).then((res) => {
-            if(res.data==null) {alert("Sai tên đăng nhập hoặc mật khẩu")}
-             else {localStorage.setItem('USER', JSON.stringify(res.data.iD_User));}
-            console.log(res.data);
-            //var user = JSON.parse(localStorage.getItem('USER'));
-            if(res.data.role===false){
-                window.location= "http://localhost:3000/";}
-            if(res.data.role===true){
-                window.location= "http://localhost:3000/admin";
+            if(res.data === "") 
+            {
+                alert("Sai tên đăng nhập hoặc mật khẩu")
             }
+            else
+            {
+                localStorage.setItem('USER', JSON.stringify(res.data.iD_User));
+                if(res.data.role===false){
+                    window.location= "http://localhost:3000/";}
+                if(res.data.role===true){
+                    window.location= "http://localhost:3000/admin";
+                }
+            }
+            //console.log(res.data);
+            //var user = JSON.parse(localStorage.getItem('USER'));
+            
           });
         e.preventDefault();
         

@@ -17,7 +17,8 @@ class KhoHang extends React.Component{
             id : "",
             name : "",
             quantity : "",
-            file: null
+            file: null,
+            role: false
         }
 
     }
@@ -28,10 +29,25 @@ class KhoHang extends React.Component{
                 kho: res.data,
             }); 
         });
+        var id = JSON.parse(localStorage.getItem('USER'));
+        if(id !==null){
+            callApi(`user/${id}`,"GET",null).then((res)=>{
+                this.setState({
+                    role: res.data.role
+                })
+            });
+            }
+            if(id===null){
+              this.setState({
+                role: false
+              })
+            }
     }
     render(){
+       
         return(
-            <div>
+            ( this.state.role ?
+            (<div>
                 <Header/>
                 <div class="container">
                     <ListHang show={this.showkhohang(this.state.kho)}/>
@@ -42,7 +58,11 @@ class KhoHang extends React.Component{
                 </div>
                 <Footer/>
             </div>
+            ) : ( <p>ERROR 404: NOT FOUND</p>)
+            )
         )
+        
+        
     }
 
     

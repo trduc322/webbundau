@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+ import React, { Component } from 'react';
 import './ThongTinKhachHang.css';
 
 export class ThongTinKhachHang extends Component {

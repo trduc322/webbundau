@@ -1,30 +1,51 @@
 import React from "react"
 import './MainChiTiet.css';
-import { FaPlus, FaMinus, FaClock, FaCarrot, FaSeedling} from 'react-icons/fa';
-
+import {FaClock, FaCarrot, FaSeedling} from 'react-icons/fa';
+import Callapi from '../../apiCaller.js'
 
 
 class MainChiTiet extends React.Component{
   constructor(props){
+    
     super(props)
-    this.state = {soluong: 1}
+    this.state = {
+      tenSp: "",
+      moTa: "",
+      giaGoc: "",
+      img: ""
+    }
+
   }
 
-  Cong=()=>{
-    const sl = this.state.soluong+1
-    this.setState({soluong: sl})
-  }
+  // Cong=()=>{
+  //   const sl = this.state.soluong+1
+  //   this.setState({soluong: sl})
+  // }
   
-  Tru=()=>{
-    if(this.state.soluong > 1){
-    var sl = this.state.soluong-1
-    }
-    else{
-      var sl = this.state.soluong
-    }
-    this.setState({soluong: sl})
-  }
+  // Tru=()=>{
+  //   if(this.state.soluong > 1){
+  //   var sl = this.state.soluong-1
+  //   }
+  //   else{
+  //     var sl = this.state.soluong
+  //   }
+  //   this.setState({soluong: sl})
+  // }
 
+  componentDidMount() {
+    var id = JSON.parse(localStorage.getItem('CHITIET'));
+    var data ={
+      iD_ThucPham: id
+    }
+    Callapi("food/chitiet","POST",data).then((res)=>{
+      this.setState({
+        tenSp: res.data.name,
+        moTa: res.data.moTa,
+        giaGoc: res.data.giaGoc,
+        img: res.data.link_Anh
+      })
+    });
+  }
     render(){
 
         return(
@@ -33,20 +54,19 @@ class MainChiTiet extends React.Component{
         <h1 class="section__title_details">Chi tiết sản phẩm</h1>
           <div class="item">
             <div class="item__img">
-              <img src={this.props.hinh} alt="oc hut"/>
+              <img src={this.state.img} alt="oc hut"/>
               <span class="shop__coupon">FREESHIP</span>
               <span class="shop__discount">Giảm giá 10%</span>
             </div>
             <div class="item__detail">
-              <h2 class="item__detail--title">Ốc hút</h2>
+        <h2 class="item__detail--title">{this.state.tenSp}</h2>
               
               <p class="item__detail--desc">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Nesciunt dolor illo assumenda, sed repellat non?
+                {this.state.moTa}
               </p>
-              <span class="price">45.000 VNĐ</span>
-              <span class="price--old">50.000 VNĐ</span>
-              <div class="item__body">
+              <span class="price">{this.state.giaGoc}.000 VNĐ</span>
+        {/* <span class="price--old">{this.state.giaGoc}</span> */}
+              {/* <div class="item__body">
                 <div class="quantity">
                   <FaPlus onClick={this.Cong} class="fas fa-plus cong"></FaPlus>
                   <span>{this.state.soluong}</span>
@@ -55,11 +75,9 @@ class MainChiTiet extends React.Component{
                 <button type="submit" class="btn btn--rounded btn--atc">
                   Đặt ngay
                 </button>
-              </div>
+              </div> */}
               <ul class="feature__list_ct">
-                <li class="feature__item_ct">
-                  <FaClock class="far fa-clock"></FaClock><span class="time">Thời gian chuẩn bị dự kiến: <strong>10 phút</strong></span>
-                </li>
+                
                 <li class="feature__item_ct">
                   <FaCarrot class="fas fa-carrot"></FaCarrot><span class="ingredient">Hương vị thơm ngon, giá cả hợp lý, ...
                   </span>

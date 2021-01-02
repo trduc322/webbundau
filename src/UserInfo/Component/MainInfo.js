@@ -16,8 +16,9 @@ export class MainInfo extends React.Component {
             email: "",
             address: "",
             password: "",
-            newpass: "",
-            newpassConfirm: "",
+            oldPass: "",
+            newPass: "",
+            passConfirm: "",
             listdh: []
         }
 
@@ -29,6 +30,7 @@ export class MainInfo extends React.Component {
         this.setState({
             [e.target.name]: e.target.value 
         });
+        
         e.preventDefault();
     }
 
@@ -48,6 +50,32 @@ export class MainInfo extends React.Component {
         e.preventDefault();
         
     }
+    
+    ChangePass = (e) =>{
+        
+
+        if((this.state.oldPass === this.state.password)&&(this.state.newPass === this.state.passConfirm)){
+            var data = {
+                name : this.state.name,
+                email: this.state.email,
+                diaChi: this.state.address,
+                sdt: this.state.phone,
+                coin: this.state.point,
+                password: this.state.newPass, 
+                username: this.state.username
+            }
+            Callapi(`user/${this.state.id}`,"PUT", data)
+            alert("Đổi mật khẩu thành công!")
+        }
+        else alert("Vui lòng nhập đúng thông tin")
+        
+        
+        //console.log(this.state.newPass)
+        
+        e.preventDefault();
+        
+    }
+    
         
     componentDidMount() {
         var id = JSON.parse(localStorage.getItem('USER'));
@@ -122,7 +150,7 @@ export class MainInfo extends React.Component {
                         />
                         <OrderHistory listdh = {this.state.listdh}/>
                         <UserAddress diachi={this.state.address} handleChange={this.handleChange} handleSubmit = {this.handleSubmit} />
-                        <UserPassword/>
+                        <UserPassword handleSubmit = {this.ChangePass} handleChange={this.handleChange}/>
                     </div>
                 </div>
             </div>
@@ -187,7 +215,7 @@ function OrderHistory(props){
         })
         return result;
     }
-    console.log(props.listdh);
+    //console.log(props.listdh);
     return(
         <div id="order--history" className="useredit">
             <table>
@@ -214,20 +242,22 @@ function OrderHistoryItems(props){
     )
 }
 
-function UserPassword(){
+function UserPassword(props){
     return(
-        <form id="user--password" className="useredit">
+        <form id="user--password" className="useredit" onSubmit = {props.handleSubmit
+        
+    }>
             <div className="form--group">
                 <label htmlFor="password--old">Mật khẩu cũ</label>
-                <input type="password" id="password--old" required/>
+                <input type="password" id="password--old" name="oldPass" required onChange = {props.handleChange}/>
             </div>
         <div className="form--group">
                 <label htmlFor="password--new">Mật khẩu mới</label>
-                <input type="password" id="password--new" required/>
+                <input type="password" id="password--new" name="newPass" required onChange = {props.handleChange}/>
         </div>
             <div className="form--group">
                 <label htmlFor="password--confirm">Xác nhận mật khẩu mới</label>
-                <input type="password" id="password--confirm" required/>
+                <input type="password" id="password--confirm" name="passConfirm" required onChange = {props.handleChange}/>
             </div>
             <button type="submit" className="btn-submit">Cập nhật</button>
         </form>

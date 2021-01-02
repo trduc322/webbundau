@@ -64,6 +64,10 @@ function App() {
             <ChiTiet />
           </Route>
 
+          <Route path="/quenmatkhau">
+            <QuenMatKhau />
+          </Route>
+
           <Route path="/cart">
             <Cart />
           </Route>

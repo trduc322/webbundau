@@ -10,7 +10,7 @@ class MainChiTiet extends React.Component{
             <div class="container">
         <h2 class="section__title_details">Gợi ý sản phẩm</h2>
         <div class="shop__body">
-          <ProductsContainer/>
+          <ProductsContainer category="all"/>
           {/* <ul class="food__list">
             <Items hinh="/Images/bundau.jpg"name= " Bún đậu" gia = "10.000.000"/>
             <Items hinh="/Images/ochut.jpg" name = "Ốc hút" gia = "169.000"/>

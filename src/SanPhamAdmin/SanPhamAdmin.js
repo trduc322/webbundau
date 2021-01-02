@@ -23,7 +23,8 @@ class SanPhamAdmin extends React.Component{
             description : "",
             category : "",
             link_Anh : "",
-            file: null
+            file: null,
+            role: false
         }
         this.uploadSingleFile = this.uploadSingleFile.bind(this)
         this.upload = this.upload.bind(this)
@@ -114,10 +115,24 @@ class SanPhamAdmin extends React.Component{
             }); 
             //console.log(this.state.products)
         });
+        var id = JSON.parse(localStorage.getItem('USER'));
+        if(id !==null){
+            callApi(`user/${id}`,"GET",null).then((res)=>{
+                this.setState({
+                    role: res.data.role
+                })
+            });
+            }
+            if(id===null){
+              this.setState({
+                role: false
+              })
+            }
     }
     
     render(){
         var { products } = this.state;
+        if(this.state.role===true){
         return(
             <div>
                 <Header/>
@@ -127,6 +142,9 @@ class SanPhamAdmin extends React.Component{
                 </div>
                 <Footer/>
             </div>
+        )}
+        return (
+            <p>ERROR 404: NOT FOUND</p>
         )
     }
     showsanpham(products){

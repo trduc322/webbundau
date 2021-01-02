@@ -103,3 +103,10 @@
 .checkouttt:hover {
     background-color: #c56715;
 }
+.km{
+    position: absolute;
+    right: -85px;
+    font-size: 3rem;
+    font-weight: bold;
+    color: rgb(240, 140, 59);
+}

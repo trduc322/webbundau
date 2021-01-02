@@ -15,10 +15,10 @@ class DangKi extends React.Component{
         super(props);
 
         this.state = {
-            userName: '',
-            password: '',
-            password_comfirmation: '',
-            email: ''
+            userName: "",
+            password: "",
+            password_comfirmation: "",
+            email: ""
             }
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -34,9 +34,22 @@ class DangKi extends React.Component{
             password : this.state.password,
             email: this.state.email
         }
-        Callapi("user","POST", data) 
-        alert("Đăng kí thành công");
-        window.location="http://localhost:3000/login";
+        var status = ""
+        Callapi("user","POST", data).then((res)=>{
+            status = res.data
+            console.log(status)
+            if(status === ""){
+                alert("Đăng kí thất bại");
+            }
+            if(status === false){
+                alert("Tên đăng nhập đã được sử dụng");
+            }
+            if(status === true){
+            alert("Đăng kí thành công");
+            window.location="http://localhost:3000/login";
+            }
+        }) 
+        
         e.preventDefault();
         
     }
